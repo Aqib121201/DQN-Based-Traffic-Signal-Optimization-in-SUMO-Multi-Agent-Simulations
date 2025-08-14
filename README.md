@@ -1,10 +1,10 @@
 # DQN-Based Traffic Signal Control in Multi-Agent SUMO Simulations
 
-## 🧠 Abstract
+##  Abstract
 
 This project implements a Deep Q-Network (DQN) reinforcement learning approach for adaptive traffic signal control in multi-agent SUMO (Simulation of Urban MObility) environments. The system optimizes traffic flow by dynamically adjusting signal timings based on real-time traffic conditions, achieving significant improvements in throughput and reduction in average wait times compared to traditional fixed-time signal control strategies.
 
-## 🎯 Problem Statement
+##  Problem Statement
 
 Urban traffic congestion remains a critical challenge affecting economic productivity, environmental sustainability, and quality of life. Traditional traffic signal control systems rely on pre-programmed timing plans that cannot adapt to dynamic traffic patterns, leading to suboptimal performance during peak hours and unexpected events. This research addresses the need for intelligent, adaptive traffic signal control that can respond to real-time traffic conditions and optimize multiple objectives simultaneously.
 
@@ -18,7 +18,7 @@ Urban traffic congestion remains a critical challenge affecting economic product
 - [Traffic Signal Control Using Deep Q-Learning with Experience Replay and Simulated Annealing](https://doi.org/10.1016/j.engappai.2020.103631)
 - [SUMO Documentation](https://sumo.dlr.de/docs/)
 
-## 📊 Dataset Description
+##  Dataset Description
 
 The project utilizes SUMO-generated synthetic traffic data with the following characteristics:
 
@@ -39,7 +39,7 @@ The project utilizes SUMO-generated synthetic traffic data with the following ch
 - OpenStreetMap data for realistic road networks
 - Custom traffic demand patterns
 
-## 🧪 Methodology
+##  Methodology
 
 ### Deep Q-Network Architecture
 
@@ -84,19 +84,7 @@ The agent can choose from the following actions:
 - **Action 2**: Skip to specific phase
 - **Action 3**: Emergency vehicle priority
 
-### Reward Function
-
-The reward function balances multiple objectives:
-
-$$R_t = \alpha \cdot \text{throughput} - \beta \cdot \text{avg\_wait\_time} - \gamma \cdot \text{fuel\_consumption} - \delta \cdot \text{phase\_changes}$$
-
-Where:
-- $\alpha = 0.4$ (throughput weight)
-- $\beta = 0.3$ (wait time penalty)
-- $\gamma = 0.2$ (fuel consumption penalty)
-- $\delta = 0.1$ (phase change penalty)
-
-## 📈 Results
+##  Results
 
 ### Performance Metrics
 
@@ -108,15 +96,8 @@ Where:
 | CO2 Emissions (kg/h) | 198.7 | 167.9 | 15.5% |
 | Average Queue Length | 12.3 | 7.8 | 36.6% |
 
-### Training Performance
 
-![Training Progress](./visualizations/training_progress.png)
-
-### SHAP Analysis
-
-![SHAP Summary Plot](./visualizations/shap_summary.png)
-
-## 🧠 Explainability / Interpretability
+##  Explainability / Interpretability
 
 The project employs SHAP (SHapley Additive exPlanations) for model interpretability:
 
@@ -135,7 +116,7 @@ The project employs SHAP (SHapley Additive exPlanations) for model interpretabil
 - Reveals optimal timing windows for different traffic densities
 - Provides insights for traffic engineering applications
 
-## ⚗️ Experiments & Evaluation
+##  Experiments & Evaluation
 
 ### Experiment Design
 
@@ -161,10 +142,10 @@ The project employs SHAP (SHapley Additive exPlanations) for model interpretabil
 - **Testing**: 15% of scenarios
 - **Random Seed**: 42 for reproducibility
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
-📦 DQN-Based Traffic Signal Control in Multi-Agent SUMO Simulations/
+DQN-Based Traffic Signal Control in Multi-Agent SUMO Simulations/
 │
 ├── 📁 data/                   # Raw & processed datasets
 │   ├── raw/                  # Original SUMO configuration files
@@ -217,7 +198,7 @@ The project employs SHAP (SHapley Additive exPlanations) for model interpretabil
 └── run_pipeline.py          # Main execution script
 ```
 
-## 💻 How to Run
+##  How to Run
 
 ### Prerequisites
 
@@ -275,7 +256,7 @@ docker build -t traffic-dqn .
 docker run -p 8501:8501 traffic-dqn
 ```
 
-## 🧪 Unit Tests
+##  Unit Tests
 
 Run the test suite:
 
@@ -290,7 +271,7 @@ pytest tests/ -v --cov=src
 - `test_dqn_agent.py`: DQN agent functionality tests
 - `test_traffic_utils.py`: Traffic utility function tests
 
-## 📚 References
+##  References
 
 1. **Mnih, V., et al.** (2015). Human-level control through deep reinforcement learning. *Nature*, 518(7540), 529-533.
 
@@ -304,7 +285,7 @@ pytest tests/ -v --cov=src
 
 6. **SUMO Documentation** (2023). Simulation of Urban MObility. https://sumo.dlr.de/docs/
 
-## ⚠️ Limitations
+##  Limitations
 
 **Current Limitations:**
 - Single intersection focus (multi-intersection coordination planned)
@@ -318,15 +299,10 @@ pytest tests/ -v --cov=src
 - Pedestrian and cyclist considerations
 - Transfer learning for different urban layouts
 
-## 📄 PDF Report
-
-[📄 Download Full Academic Report](./report/Thesis_TrafficSignalControl.pdf)
-
-## 🧠 Contribution & Acknowledgements
+##  Contribution & Acknowledgements
 
 **Contributors:**
-- **Primary Author**: [Your Name] - DQN implementation, SUMO integration
-- **Advisor**: [Advisor Name] - Research guidance, methodology review
+- **Primary Author**: Aqib Siddiqui - DQN implementation, SUMO integration
 
 **Acknowledgements:**
 - SUMO development team for the simulation framework
